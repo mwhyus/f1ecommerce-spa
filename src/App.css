@@ -1,16 +1,42 @@
 .Parentbox {
-  width: 80%;
+  width: 70%;
   overflow: hidden;
   margin: auto;
   margin-top: 100px;
 }
 
 .Photo {
+  float: left;
   width: 50%;
   height: 700px;
-  background: red;
 }
 
 .Photo img {
-  width: 300px;
+  width: 100%;
+}
+
+.Description {
+  width: 35%;
+  overflow: hidden;
+  float: left;
+  margin-left: 30px;
+}
+
+.Description .info {
+  line-height: 1.8;
+  color: rgb(18, 19, 49);
+}
+
+.Description .Price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Description .Title {
+  margin: 0;
+  color: #34495e;
+}
+
+.Description .Category {
+  color: #34495e;
 }
