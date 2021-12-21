@@ -40,3 +40,21 @@
 .Description .Category {
   color: #34495e;
 }
+
+.Description a {
+  margin-top: 20px;
+  color: aliceblue;
+  font-weight: 500;
+  background: rgb(44, 84, 119);
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 20px 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.Description a:hover {
+  color: aliceblue;
+  background: rgb(43, 46, 66);
+  transition: all 0.5s;
+}

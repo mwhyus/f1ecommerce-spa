@@ -2,30 +2,77 @@ import f1 from './image/redbull.jpg';
 import './App.css';
 
 function App() {
+  return (
+    <div className="Parentbox">
+      <ProductPhoto />
+      <ProductInfo 
+        isDiscount
+        Category='F1 CAR' 
+        Name="Red Bull F1 W05 Hybrid"
+      />
+    </div>
+  );
+}
 
-  let Category = "F1 CAR"
-  let dot = '.'
-  let Price = `650${dot}000`
+function ProductPhoto() {
+  return(
+    <div className='Photo'>
+      <img src={f1} />
+    </div>
+  )
+}
+
+function ProductInfo({Category, Name, isDiscount}) {
+  let Price = 700000
+  let Discount = 0.8
+  let afterDiscount = Price * Discount
+
+  let benefits = ["Big Discount", "Premium Service", "Free Regular Check Up"]
+  let listBenefits = benefits.map((itemBenefits) => 
+    <li>{itemBenefits}</li>
+  )
 
   return (
-    <div class="Parentbox">
-      <div class='Photo'>
-        <img src={f1} />
-      </div>
-      <div class='Description'>
-        <h2 class="Category">{Category}</h2>
-        <h1 class="Title">Red Bull F1 W05 Hybrid</h1>
-        <p class="Price">$ {Price}</p>
-        <p class="info">
+    <div>
+      <div className="Description">
+        <h2 className="Category">{Category}</h2>
+        <h1 className="Title">{Name}</h1>
+        <p className='Price'>$ {afterDiscount}</p>
+        <CheckDiscount isDiscount={isDiscount} />
+        <p className="info">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
           when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
           It has survived not only five centuries, but also the leap into electronic 
-          typesetting, remaining essentially unchanged.
+          type setting, remaining essentially unchanged.
         </p>
+        <h2>What will you get: </h2>
+        <ul>
+          {listBenefits}
+        </ul>
+        <a onClick={(e) => purchaseNow(Name, e)} href='#'>Purchase Now</a>
       </div>
     </div>
   );
+}
+
+function purchaseNow(e) {
+  console.log(`Congratulation, ${e} has been purchased`);
+}
+
+function CheckDiscount({isDiscount}) {
+  let Dicount = 20
+
+  if(isDiscount){
+    return(
+      <p>{Dicount}% OFF</p>
+    );
+  } 
+  else {
+    return(
+      <p>Belum ada diskon</p>
+    );
+  }
 }
 
 export default App;
