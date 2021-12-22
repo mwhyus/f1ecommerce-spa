@@ -5,14 +5,19 @@
   margin-top: 100px;
 }
 
+.container {
+  width: 60%;
+}
+
 .Photo {
   float: left;
   width: 50%;
-  height: 700px;
+  height: 100%;
 }
 
 .Photo img {
   width: 100%;
+  border-radius: 20px;
 }
 
 .Description {
