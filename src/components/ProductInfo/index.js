@@ -14,7 +14,7 @@ export function ProductInfo({Category, Name, isDiscount}) {
         } 
         else {
           return(
-            <p>Belum ada diskon</p>
+            <p>Coming soon</p>
           );
         }
       }
@@ -25,7 +25,7 @@ export function ProductInfo({Category, Name, isDiscount}) {
 
     let benefits = ["Big Discount", "Premium Service", "Free Regular Check Up"]
     let listBenefits = benefits.map((itemBenefits) => 
-      <li>{itemBenefits}</li>
+      <li key={itemBenefits}>{itemBenefits}</li>
     )
   
     return (
@@ -33,14 +33,19 @@ export function ProductInfo({Category, Name, isDiscount}) {
         <div className="Description">
           <h2 className="Category">{Category}</h2>
           <h1 className="Title">{Name}</h1>
-          <p className='Price'>${afterDiscount}</p>
+          <p className="beforeDiscount">${Price}</p>
+          <h1 className='Price'>${afterDiscount}</h1>
           <CheckDiscount isDiscount={isDiscount} />
           <p className="info">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic 
-            type setting, remaining essentially unchanged.
+            Honda’s RA621 was in essence an all-new design, 
+            within what is allowed by the power unit regulations. 
+            It was smaller and more powerful than the 2020 power unit. 
+            A major re-assessment of priorities between combustion chamber efficiency and energy 
+            captured by the exhaust led to a totally new cylinder head.
+          </p>
+          <p className="info">
+          Increased valve angles (the angle between the inlet and exhaust valves) allowed the head to be lower and for the camshafts to be smaller in diameter. 
+          A different material for the block allowed the gap between the cylinders to be smaller.
           </p>
           <h2>What will you get: </h2>
           <ul>

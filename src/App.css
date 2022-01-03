@@ -1,6 +1,7 @@
 .Parentbox {
   width: 70%;
   overflow: hidden;
+  /* margin: 50px; */
   margin: auto;
   margin-top: 100px;
 }
@@ -33,13 +34,18 @@
 }
 
 .Description .Price {
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 500;
 }
 
 .Description .Title {
   margin: 0;
   color: #34495e;
+}
+
+.Description .beforeDiscount {
+  text-decoration: line-through;
+  color: red;
 }
 
 .Description .Category {
